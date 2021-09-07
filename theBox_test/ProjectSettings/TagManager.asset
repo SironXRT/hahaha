@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Goal
+  - 017y
+  - Cube
+  - GM
+  - Death
+  - Button
+  - 017x
+  - 017z
+  - Rect
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Objs
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: 017a_partA
+    uniqueID: 945051325
+    locked: 0
+  - name: 017a_partB
+    uniqueID: 1717360681
+    locked: 0
+  - name: 017a_partC
+    uniqueID: 2901332931
+    locked: 0
+  - name: 017a_background
+    uniqueID: 1889062897
+    locked: 0
+  - name: 017b_partA
+    uniqueID: 1355495371
+    locked: 0
+  - name: 017b_partB
+    uniqueID: 2245710739
+    locked: 0
+  - name: 017b_partC
+    uniqueID: 3855902319
+    locked: 0
+  - name: 017b_partD
+    uniqueID: 3741761155
+    locked: 0
+  - name: 017b_background
+    uniqueID: 309925145
+    locked: 0
+  - name: 017c_partA
+    uniqueID: 1653030929
+    locked: 0
+  - name: 017c_partB
+    uniqueID: 4030623971
+    locked: 0
+  - name: 017c_partC
+    uniqueID: 1993571803
+    locked: 0
+  - name: 017c_background
+    uniqueID: 3715576945
+    locked: 0
+  - name: 017d_partA
+    uniqueID: 4086191739
+    locked: 0
+  - name: 017d_sea
+    uniqueID: 307861347
+    locked: 0
+  - name: 017d_partB
+    uniqueID: 4167519223
+    locked: 0
+  - name: 017d_background
+    uniqueID: 2523093011
+    locked: 0
+  - name: N_001
+    uniqueID: 1307174739
+    locked: 0
+  - name: N_001_background
+    uniqueID: 4291415859
+    locked: 0
+  - name: N_002
+    uniqueID: 3465062885
+    locked: 0
+  - name: N_002_background
+    uniqueID: 4015751181
+    locked: 0
+  - name: N_003
+    uniqueID: 3553977691
+    locked: 0
+  - name: N_003_background
+    uniqueID: 4014619455
+    locked: 0
+  - name: N_004_partA
+    uniqueID: 1218783479
+    locked: 0
+  - name: N_004_partB
+    uniqueID: 2318759981
+    locked: 0
+  - name: N_004_partC
+    uniqueID: 2547721225
+    locked: 0
+  - name: N_004_background
+    uniqueID: 240837923
+    locked: 0
+  - name: N_005
+    uniqueID: 1934453251
+    locked: 0
+  - name: N_005_background
+    uniqueID: 1801988449
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
