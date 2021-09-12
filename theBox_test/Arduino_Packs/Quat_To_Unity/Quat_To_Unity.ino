@@ -22,6 +22,8 @@ float ypr[3];           // [yaw, pitch, roll]   yaw/pitch/roll container and gra
 
 const byte analogPin = A0;
 const int SwitchPin = 4;
+const int SwitchPin2 = 7;
+int Switch2_State = 0;
 int Switch_State = 0;
 int TransableEmuValue;
 
@@ -29,7 +31,8 @@ void setup() {
   Wire.begin();
   Wire.setClock(400000); // 400kHz I2C clock. Comment this line if having compilation difficulties
   Serial.begin(115200);
-  pinMode(SwitchPin, INPUT);
+  pinMode(SwitchPin, INPUT_PULLUP);
+  pinMode(SwitchPin2, INPUT_PULLUP);
   while (!Serial); // wait for Leonardo enumeration, others continue immediately
 
   mpu.initialize();
@@ -68,6 +71,8 @@ void loop() {
       mpu.getFIFOBytes(fifoBuffer, packetSize);
       fifoCount -= packetSize;
 
+      //Serial.flush(); //try make unity not lag;
+      
       SendQuaternion();
       // ↑ That's the right one!
       //SendEuler();
@@ -77,8 +82,7 @@ void loop() {
 
       ReadTrasEmu();
       ReadSwitch();
-
-
+      ReadSwitch2();
     }
   }
 
@@ -90,6 +94,11 @@ void ReadTrasEmu(){
 void ReadSwitch(){
     Switch_State = digitalRead(SwitchPin);
     Serial.print(Switch_State); Serial.print("/"); 
+}
+
+void ReadSwitch2(){
+    Switch2_State = digitalRead(SwitchPin2);
+    Serial.print(Switch2_State); Serial.print("/");
 }
 
 void SendQuaternion() {

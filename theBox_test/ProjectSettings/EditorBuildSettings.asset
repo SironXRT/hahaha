@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Section2/Box_Creation_Scene.unity
+    guid: f3dc65e1a78e75149b8731a3a0581955
+  - enabled: 1
     path: Assets/Scenes/Section2/N_001.unity
     guid: a199759799a860d4089b2e32308e1607
   - enabled: 1
