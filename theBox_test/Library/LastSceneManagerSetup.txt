@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Section2/N_SpeakWithCat.unity
+- path: Assets/Scenes/Section2/Box_Creation_Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

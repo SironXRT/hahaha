@@ -5,7 +5,7 @@ using System.IO.Ports;
 using System;
 public class Arduino : MonoBehaviour
 {
-    public SerialPort sp = new SerialPort("COM11", 115200);
+    public SerialPort sp = new SerialPort("COM12", 115200);
     public Transform parentbox;
 
     // Start is called before the first frame update
@@ -39,7 +39,7 @@ public class Arduino : MonoBehaviour
     public Quaternion qua;
     public int Button_Knob; //0~1023
     public int Button_Press;    //1=>off  0=>on
-    public int Switch_State;    //1=>off  0=>on
+    public int Switch_State;    //1=>on  0=>off
     // Update is called once per frame
     void Update()
     {
