@@ -38,94 +38,103 @@ public class N_PlayWithCat : MonoBehaviour
     public Sprite[] backgrounds;
 
     bool SongOut = false;
+
+    bool setto0 = true;
     // Button knob 0 ~ 1024 > 10 ~ 1010
     // Start is called before the first frame update
     void Start()
     {
         arduino = GameObject.FindGameObjectWithTag("Cube").GetComponent<Arduino>();
+        if (arduino.Button_Knob < 10)
+        {
+            setto0 = true;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        int ar = arduino.Button_Knob / 100;
-        txt_Knob.text = ar.ToString();
-
-        if (arduino.Switch_State == 1)
+        if (setto0)
         {
-            fur1.gameObject.SetActive(true);
-            fur2.gameObject.SetActive(true);
-            fur3.gameObject.SetActive(true);
-        }
-        else if (!furniture_SuperBANANA)
-        {
-            fur1.gameObject.SetActive(false);
-            fur2.gameObject.SetActive(false);
-            fur3.gameObject.SetActive(false);
-        }
+            int ar = arduino.Button_Knob / 100;
+            txt_Knob.text = ar.ToString();
 
-        if (!SongOut)
-        {
-            CheckMusic();
-        }
+            if (arduino.Switch_State == 1)
+            {
+                fur1.gameObject.SetActive(true);
+                fur2.gameObject.SetActive(true);
+                fur3.gameObject.SetActive(true);
+            }
+            else if (!furniture_SuperBANANA)
+            {
+                fur1.gameObject.SetActive(false);
+                fur2.gameObject.SetActive(false);
+                fur3.gameObject.SetActive(false);
+            }
 
-        if (arduino.Button_Knob <= 200)
-        {
-            BK_Trans.color = new Color(BK_Trans.color.r, BK_Trans.color.g, BK_Trans.color.b, Mathf.Abs(((arduino.Button_Knob - 10f) / 190f) - 1));
-        }
-        else if (arduino.Button_Knob <= 800)
-        {
+            if (!SongOut)
+            {
+                CheckMusic();
+            }
 
-        }
-        else if (arduino.Button_Knob <= 950)
-        {
-            Trans_Red.color = new Color(1, 0, 0, (arduino.Button_Knob - 800f) / 150f <= 0 ? 0 : (arduino.Button_Knob - 800f) / 150f);
-        }
+            if (arduino.Button_Knob <= 200)
+            {
+                BK_Trans.color = new Color(BK_Trans.color.r, BK_Trans.color.g, BK_Trans.color.b, Mathf.Abs(((arduino.Button_Knob - 10f) / 190f) - 1));
+            }
+            else if (arduino.Button_Knob <= 800)
+            {
 
-        if (arduino.Button_Knob >= 550 && !Warningout)
-        {
-            Warningout = true;
-            Warn_txt.gameObject.SetActive(true);
-        }
-        if (arduino.Button_Knob >= 500 && !furniture_SuperBANANA)
-        {
-            furniture_SuperBANANA = true;
-            fur1.gameObject.SetActive(true);
-            fur2.gameObject.SetActive(true);
-            fur3.gameObject.SetActive(true);
+            }
+            else if (arduino.Button_Knob <= 950)
+            {
+                Trans_Red.color = new Color(1, 0, 0, (arduino.Button_Knob - 800f) / 150f <= 0 ? 0 : (arduino.Button_Knob - 800f) / 150f);
+            }
 
-            fur1.GetComponent<SuperBanana>().Active();
-            fur2.GetComponent<SuperBanana>().Active();
-            fur3.GetComponent<SuperBanana>().Active();
-        }
-        if (arduino.Button_Knob >= 700 && !furniture_Explode)
-        {
-            furniture_Explode = true;
+            if (arduino.Button_Knob >= 550 && !Warningout)
+            {
+                Warningout = true;
+                Warn_txt.gameObject.SetActive(true);
+            }
+            if (arduino.Button_Knob >= 500 && !furniture_SuperBANANA)
+            {
+                furniture_SuperBANANA = true;
+                fur1.gameObject.SetActive(true);
+                fur2.gameObject.SetActive(true);
+                fur3.gameObject.SetActive(true);
 
-
-            fur1.sprite = null;
-            fur2.sprite = null;
-            fur3.sprite = null;
-
-            fur1.GetComponent<SuperBanana>().Deactivate();
-            fur2.GetComponent<SuperBanana>().Deactivate();
-            fur3.GetComponent<SuperBanana>().Deactivate();
-
-            fur1.color = new Color(1, 1, 1, 1);
-            fur2.color = new Color(1, 1, 1, 1);
-            fur3.color = new Color(1, 1, 1, 1);
-        }
-        if (arduino.Button_Knob >= 990 && !game_explode)
-        {
-            game_explode = true;
-            StartCoroutine(Exploded());
-        }
+                fur1.GetComponent<SuperBanana>().Active();
+                fur2.GetComponent<SuperBanana>().Active();
+                fur3.GetComponent<SuperBanana>().Active();
+            }
+            if (arduino.Button_Knob >= 700 && !furniture_Explode)
+            {
+                furniture_Explode = true;
 
 
-        if (arduino.Button_Press == 0 && !floating)
-        {
-            StartCoroutine(ShowCode());
-            floating = true;
+                fur1.sprite = null;
+                fur2.sprite = null;
+                fur3.sprite = null;
+
+                fur1.GetComponent<SuperBanana>().Deactivate();
+                fur2.GetComponent<SuperBanana>().Deactivate();
+                fur3.GetComponent<SuperBanana>().Deactivate();
+
+                fur1.color = new Color(1, 1, 1, 1);
+                fur2.color = new Color(1, 1, 1, 1);
+                fur3.color = new Color(1, 1, 1, 1);
+            }
+            if (arduino.Button_Knob >= 990 && !game_explode)
+            {
+                game_explode = true;
+                StartCoroutine(Exploded());
+            }
+
+
+            if (arduino.Button_Press == 0 && !floating)
+            {
+                StartCoroutine(ShowCode());
+                floating = true;
+            }
         }
     }
 

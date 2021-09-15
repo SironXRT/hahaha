@@ -9,6 +9,7 @@ public class Cat_Animation : MonoBehaviour
 
     RectTransform rt;
 
+    bool face_left = true;
 
     public float currentAngle, pureVelocity;
 
@@ -30,6 +31,18 @@ public class Cat_Animation : MonoBehaviour
 
         anime.SetFloat("CurrentAngle", currentAngle);
         anime.SetFloat("PureVelocity", pureVelocity);
+
+        if (GetComponent<Rigidbody2D>().velocity.x > 0 && face_left)
+        {
+            face_left = false;
+            transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
+        }
+
+        if (GetComponent<Rigidbody2D>().velocity.x < 0 && !face_left)
+        {
+            face_left = true;
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
     }
 
     public Vector2 DegreeToVector2(float degree)

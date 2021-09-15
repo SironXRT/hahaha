@@ -10,6 +10,7 @@ public class ButtonTriggers : MonoBehaviour
                              // 1 = Spawn
     bool triggered = false;
 
+    public bool use_Ads = true;
     public bool is_Switch = false;
 
     void OnTriggerEnter2D (Collider2D col)
@@ -18,7 +19,7 @@ public class ButtonTriggers : MonoBehaviour
         {
             if (is_Switch)
             {
-                ads.Play();
+                if (use_Ads) ads.Play();
                 for (int i = 0; i < TargetObj.Length; i++)
                 {
                     switch (WhatTodo[i])
@@ -37,7 +38,7 @@ public class ButtonTriggers : MonoBehaviour
             }
             else if (!triggered)
             {
-                ads.Play();
+                if (use_Ads) ads.Play();
                 for (int i = 0; i < TargetObj.Length; i++)
                 {
                     switch (WhatTodo[i])
@@ -59,7 +60,7 @@ public class ButtonTriggers : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ads = this.GetComponent<AudioSource>();
+        if (use_Ads) ads = this.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

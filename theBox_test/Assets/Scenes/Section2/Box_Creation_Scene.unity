@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 2136551959}
   - component: {fileID: 2136551958}
   m_Layer: 0
-  m_Name: SceneManager
+  m_Name: SceneManager_ChangeTime Here
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e93885dadc1ab49b206299721dcefb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AdjustTime: 11
+  AdjustTime: 1
 --- !u!4 &2136551959
 Transform:
   m_ObjectHideFlags: 0
