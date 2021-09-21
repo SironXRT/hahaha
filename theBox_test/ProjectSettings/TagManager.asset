@@ -13,6 +13,8 @@ TagManager:
   - 017x
   - 017z
   - Rect
+  - Fish
+  - Wall
   layers:
   - Default
   - TransparentFX

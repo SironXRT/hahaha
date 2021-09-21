@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Section2/Box_Creation_Scene.unity
     guid: f3dc65e1a78e75149b8731a3a0581955
   - enabled: 1
+    path: Assets/Scenes/Scene_N/N_Extra01_CraneMachine.unity
+    guid: db767da37c7ca1a4ca09cb43666841e3
+  - enabled: 1
     path: Assets/Scenes/Section2/N_Extra02_time.unity
     guid: bbba5becf54c83b48ba4f2995de8d827
   - enabled: 1

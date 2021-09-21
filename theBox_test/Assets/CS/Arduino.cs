@@ -5,7 +5,7 @@ using System.IO.Ports;
 using System;
 public class Arduino : MonoBehaviour
 {
-    public SerialPort sp = new SerialPort("COM12", 115200);
+    public SerialPort sp = new SerialPort("COM17", 115200);
     public Transform parentbox;
 
     // Start is called before the first frame update

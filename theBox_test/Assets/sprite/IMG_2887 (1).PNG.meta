@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: 3646472848672859782
     second: IMG_2887 (1)_0
+  - first:
+      213: 9082637363684051563
+    second: IMG_2887 (1)_1
+  - first:
+      213: 6942961890620834568
+    second: Fish
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -110,7 +116,7 @@ TextureImporter:
         width: 9
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -118,6 +124,48 @@ TextureImporter:
       bones: []
       spriteID: 686a04c6cbfda9230800000000000000
       internalID: 3646472848672859782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_2887 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 4
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a04167f820c0e70800000000000000
+      internalID: 9082637363684051563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fish
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 22
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803878bdd0b5a5060800000000000000
+      internalID: 6942961890620834568
       vertices: []
       indices: 
       edges: []
